@@ -1,6 +1,8 @@
 services:
   web:
-    build: .
+    build: 
+      context: "https://github.com/miuguelt/HolaDocker.git"
+      dockerfile: Dockerfile
     volumes:
       - .:/app
 
