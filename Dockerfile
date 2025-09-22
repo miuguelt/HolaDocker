@@ -6,8 +6,6 @@ COPY requirements.txt .
 RUN pip install --default-timeout=100 --no-cache-dir -r requirements.txt
 # Copiar el resto del código
 COPY . .
-# Establecer variable de entorno
-ENV APP_NAME=$APP_NAME
 EXPOSE 5000
 CMD [ "python", "app.py" ]
 #CMD sh -c "gunicorn --bind 0.0.0.0:8081 --workers 4 --forwarded-allow-ips=*  wsgi:app"
